@@ -28,7 +28,13 @@ all_data = (
 )
 
 print(
-    float(len(all_data[all_data.purchase_time.isnull()][(all_data.checkout_time.notnull())]))
+    float(
+        len(
+            all_data[all_data.purchase_time.isnull()][
+                (all_data.checkout_time.notnull())
+            ]
+        )
+    )
     / float(len(visits))
     * 100
 )
